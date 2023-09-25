@@ -24,18 +24,10 @@
 }
 
 body {
-  /*
-  background-image: url(/assets/bg-mobile.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-*/
-  /* Criando um atalho para todas as configurações acima:*/
-
   background: var(--bg-url) no-repeat top center/cover;
-
-  /* Observer que eu coloquei os valores diretamente sem precisar colocar o que era antes, porém, para o "cover" é necessário colocar uma / após a última configuração antes dele para que funcione corretamente*/
+  height: 100vh;
 }
+
 body * {
   font-family: "Bruno Ace SC", cursive;
   font-family: "Inter", sans-serif;
@@ -153,4 +145,16 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* Media Queries */
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
